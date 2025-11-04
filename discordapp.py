@@ -94,8 +94,8 @@ async def on_message(message):
             reply = response.choices[0].message.content
             await message.channel.send(reply)
 
-        except Exception as e:
-            await message.channel.send(f"Oops! Something went wrong: {e}")
+        except Exception as error:
+            await message.channel.send(f"Oops! Something went wrong: {error}")
 
     # Let other commands still work
     await bot.process_commands(message)
